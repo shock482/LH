@@ -48,37 +48,15 @@ jQuery(function($){
 									id_mas.push(postsData[i].id);
 								}
 							  return [id_mas, postsData[i]];
-								// id_mas.forEach(function(current_page, id_mas){
-								// 	if(postsData[i].id == id_mas[current_page]){
-								// 		ourHTMLString += '<h1 class="archive-page-header text-center">' + postsData[i].title.rendered + '</h1>';
-								// 		ourHTMLString += postsData[i].content.rendered;
-								// 	}
-								// 	// return ourHTMLString;
-								// 	console.log(123);
-								// });
-				      }
-				    // return postsData;
 			     }
-
 						console.log(getDataArray());
-						// console.log(id_mas);
-						// console.log(postsData);
 							var ourHTMLString = '';
-							  // for (var i = 0; i < current_page; i++){
-							  // }
-								//
-									// if(postsData[i].id == id_mas[current_page]){
-								// 		ourHTMLString += '<h1 class="archive-page-header text-center">' + postsData[i].title.rendered + '</h1>';
-								// 		ourHTMLString += postsData[i].content.rendered;
-								// 	}
-								// $("#content").html(ourHTMLString);
 
 							id_mas.forEach(function(item, current_page){
 								if(postsData[i].id == item){
 									ourHTMLString += '<h1 class="archive-page-header text-center">' + postsData[i].title.rendered + '</h1>';
 									ourHTMLString += postsData[i].content.rendered;
 								}
-								// return ourHTMLString;
 								console.log(123);
 							});
 						$("#content").html(ourHTMLString);
