@@ -43,23 +43,21 @@ jQuery(function($){
 						  };
 						  ourRequest.send();
 
-							function getIds(postsData){
-								for (var i = 0; i < postsData.length; i++){
-									id_mas.push(postsData[i].id);
-								}
-							  return [id_mas, postsData[i]];
-			     }
-						console.log(getDataArray());
 							var ourHTMLString = '';
 
-							id_mas.forEach(function(item, current_page){
-								if(postsData[i].id == item){
-									ourHTMLString += '<h1 class="archive-page-header text-center">' + postsData[i].title.rendered + '</h1>';
-									ourHTMLString += postsData[i].content.rendered;
+							function getIds(postsData){
+								postsData.forEach(function(item, index, postsData){
+									id_mas.push(postsData[index].id);
+								});
+
+								if(postsData[current_page].id == id_mas[current_page]){
+									ourHTMLString += '<h1 class="archive-page-header text-center">' + postsData[current_page].title.rendered + '</h1>';
+									ourHTMLString += postsData[current_page].content.rendered;
 								}
-								console.log(123);
-							});
-						$("#content").html(ourHTMLString);
+								 return $("#content").html(ourHTMLString);
+					    }
+			      }
+					 getDataArray();
 					}
 				}
 			}
